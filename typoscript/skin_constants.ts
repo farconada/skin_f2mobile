@@ -1,21 +1,13 @@
 siteLogo = {$templavoila_framework.skinPath}css/images/logo.gif
 siteLogoMaxH = 350
-siteLogoMaxW = 150 
-enable_mobile_skin = 1
+siteLogoMaxW = 150
+siteFullURL =
+siteHomePid = 1
 enableJQuery = 0
 headerNavigationIncludeList = 1
 footerNavigationIncludeList = 1
-footerText = Pie de pagina
-signupText = Registro de usuario
+footerText = Texto de <strong>pie</strong> de pagina
 
-# cat=Site Constants/general//; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Search Page ID: If not page ID is provided, the search box will not be shown.
-searchPID =
-
-# cat=Site Constants/general//; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Login Page ID: If no page ID is provided, the login link will not be shown.
-loginPID =
-
-# cat=Site Constants/general//; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Registration Page ID: If no page ID is provided, the registration link will not be shown.
-registerPID =
 
 
 ##############################################################

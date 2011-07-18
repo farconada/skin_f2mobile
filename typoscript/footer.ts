@@ -6,11 +6,11 @@ lib.footer {
 	20 = HMENU
 	20 {
 					special = list
-					special.value = {$headerNavigationIncludeList}
+					special.value = {$footerNavigationIncludeList}
 					1 = TMENU
 					1 {
 									noBlur = 1
-									wrap = <ul id="footerMenuUtils" class="ui-bar" data-role="controlgroup" data-type="horizontal" >|</ul>
+									wrap = <nav><ul id="footerMenuUtils" class="ui-bar" data-role="controlgroup" data-type="horizontal" >|</ul></nav>
 									NO = 1
 									NO.ATagTitle.field = abstract // description // subtitle
 									NO.allWrap = <li data-role="button">|</li>

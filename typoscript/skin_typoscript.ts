@@ -4,6 +4,7 @@
 #
 ##############################################################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skin_f2mobile/typoscript/footer.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skin_f2mobile/typoscript/header.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skin_f2mobile/typoscript/boxes.ts">
 
 lib.stdheader.10.key.ifEmpty = 3
@@ -56,7 +57,7 @@ preCodeFooter.10.value (
 	</div>
 	<!-- end #pageContent -->
 	<div class="clear"></div>
-	<div id="footer" data-role="footer" data-position="fixed" data-theme="a">
+	<footer><div id="footer" data-role="footer" data-position="fixed" data-theme="a">
 )
 preCodeFooter.20 >
 
@@ -65,6 +66,7 @@ postCodeFooter = HTML
 postCodeFooter.value (
 
 	</div>
+	</footer>
 	<!-- end #footer -->
 	</div>
 	<!-- end #pageWrap  -->
@@ -79,51 +81,6 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
 
 
 header >
-lib.myheader = COA
-lib.myheader.wrap = <div id="header" data-role="header"> |<!-- interior end--></div>
-
-# Add the masthead for site title / logo.
-lib.myheader.10 = COA
-lib.myheader.10 {
-	10 = TEXT
-        10 {
-             data = page:title
-             wrap = <h1>|</h1>
-            }
-        20 = TEXT
-	20 {
-		value = Home
-		typolink.parameter = {$siteURL}
-		typolink.ATagParams = data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home"
-		wrap = |
-	}
-	30 = HMENU
-	30 {
-					special = list
-					special.value = {$headerNavigationIncludeList}
-					1 = TMENU
-					1 {
-									noBlur = 1
-									wrap = <div data-role="navbar"><ul>|</ul></div>
-									NO = 1
-									NO.ATagTitle.field = abstract // description // subtitle
-									NO.allWrap = <li>|</li>
-									NO.linkWrap = |
-									NO.stdWrap.htmlSpecialChars = 1
-									CUR < .NO
-									CUR = 1
-									CUR.allWrap = <li class="ui-btn-active">|</li>
-									CUR.doNotLinkIt = 1
-									CUR.stdWrap.htmlSpecialChars = 1
-						 }
-	}
-
-}
-
-### topnav
-#lib.myheader.20 =< lib.topnav
-
-
 header =< lib.myheader
 footer =< lib.footer
 
@@ -193,7 +150,7 @@ page.headerData.5.wrap = <title> |</title>
 page.includeJSlibs {
     jquery = http://code.jquery.com/jquery-1.6.1.min.js
         jquery.external = 1
-         
+    jqmobileinit = fileadmin/jqmobile.js
     jquerymobile = http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js
         jquerymobile.external = 1
         }
